@@ -1,14 +1,15 @@
 # basic workflow that creates secrets
 
-name: Create GitHub Secret Action
+name: Set Action Secret
 
 on: ["push"]
 jobs:
-  secret_job:
+  secret:
     runs-on: "ubuntu-latest"
     steps:
-      - uses: gliech/create-github-secret-action@v1.4.8
-        with:
-          name: TEST_SECRET
-          value: Placeholder
-          pa_token: ${{ secrets.PA_TOKEN }}
+    - uses: hmanzur/actions-set-secret@v2.0.0
+      with:
+        name: 'MY_SECRET_NAME'
+        value: 'Lorem ipsun dolor simit'
+        repository: ${{ github.repository }}
+        token: ${{ secrets.REPO_ACCESS_TOKEN }}
