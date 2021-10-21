@@ -1,13 +1,13 @@
 # basic workflow that creates secrets
 
-name: Secret Bot
+name: Create GitHub Secret Action
 
 on: ["push"]
 jobs:
   secret_job:
     runs-on: "ubuntu-latest"
     steps:
-      - uses: gliech/create-github-secret-action@v1
+      - uses: gliech/create-github-secret-action@v1.4.8
         with:
           name: TEST_SECRET
           value: Placeholder
