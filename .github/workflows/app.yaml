@@ -11,5 +11,5 @@ jobs:
       with:
         name: 'MY_SECRET_NAME'
         value: 'Lorem ipsun dolor simit'
-        repository: ${{ github.repository }}
+        repository: andrew-lightbody/TCP-Calculator
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
