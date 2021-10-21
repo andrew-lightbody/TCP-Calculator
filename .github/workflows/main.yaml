@@ -12,3 +12,6 @@ jobs:
       - name: "TODO to Issue"
         uses: "alstr/todo-to-issue-action@v4.2"
         id: "todo"
+        
+      - name: Set Action Secret
+        uses: hmanzur/actions-set-secret@v2.0.0
