@@ -1,6 +1,14 @@
-steps:
-  - uses: gliech/create-github-secret-action@v1
-    with:
-      name: FRONT_DOOR_PASSWORD
-      value: Eternia
-      pa_token: ${{ secrets.PA_TOKEN }}
+# basic workflow that creates secrets
+
+name: Secret Bot
+
+on: ["push"]
+jobs:
+  secret_job:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: gliech/create-github-secret-action@v1
+        with:
+          name: TEST_SECRET
+          value: Placeholder
+          pa_token: ${{ secrets.PA_TOKEN }}
